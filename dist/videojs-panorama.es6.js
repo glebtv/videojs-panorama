@@ -231,7 +231,7 @@ var BaseCanvas = function BaseCanvas(baseComponent, THREE) {
             var clientY = event.clientY || event.touches && event.touches[0].clientY;
             if (typeof clientX === "undefined" || clientY === "undefined") return;
             if (this.settings.clickAndDrag) {
-                if (event.buttons == 1) {
+                if ( (event.touches && event.touches[0]) || event.buttons == 1) {
                     if (this.mouseDown) {
                         this.lon = (this.onPointerDownPointerX - clientX) * 0.2 + this.onPointerDownLon;
                         this.lat = (clientY - this.onPointerDownPointerY) * 0.2 + this.onPointerDownLat;
