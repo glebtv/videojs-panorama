@@ -1,6 +1,3 @@
-import videojs from 'video.js';
-import THREE$1 from 'three';
-
 /**
  * @author alteredq / http://alteredqualia.com/
  * @author mr.doob / http://mrdoob.com/
